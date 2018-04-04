@@ -13,7 +13,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd cenchat-server`
+* `cd cenchat-sandbox-refresher/src`
 * `npm install`
 
 ## Running / Development
