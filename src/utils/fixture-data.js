@@ -1,4 +1,4 @@
-module.exports = function (db) {
+module.exports = function fixtureData(db) {
   return {
     __collection__: {
       comments: {

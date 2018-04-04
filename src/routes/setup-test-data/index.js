@@ -21,7 +21,7 @@ function batchWriteData(batch, data, ref, id) {
 
   if (data.__collection__) {
     for (const collectionId of Object.keys(data.__collection__)) {
-      const docs = data['__collection__'][collectionId]['__doc__'];
+      const docs = data.__collection__[collectionId].__doc__;
 
       for (const docId of Object.keys(docs)) {
         const newData = docs[docId];

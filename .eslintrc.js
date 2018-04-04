@@ -9,7 +9,9 @@ module.exports = {
     es6: true,
     node: true,
   },
-  rules: {},
+  rules: {
+    "no-underscore-dangle": "off",
+  },
   overrides: [
     // test files
     {
