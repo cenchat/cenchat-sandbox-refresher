@@ -1,13 +1,23 @@
 module.exports = function fixtureData(db) {
   return {
     __collection__: {
+      betaTesters: {
+        __doc__: {
+          QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
+            monthlyViews: 'lt-1m',
+            status: 'approved',
+            website: 'https://site-a.com',
+          },
+        },
+      },
+
       comments: {
         __doc__: {
           comment_a: {
             attachments: null,
             author: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
             createdOn: new Date('2017-01-01'),
-            isAskMeAnything: false,
+            isAskMeAnything: true,
             isDeleted: false,
             page: db.collection('pages').doc('site_a__page_a'),
             replyTo: null,
@@ -223,7 +233,7 @@ module.exports = function fixtureData(db) {
                     attachments: null,
                     author: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
                     createdOn: new Date('2017-01-01'),
-                    isAskMeAnything: false,
+                    isAskMeAnything: true,
                     isDeleted: false,
                     page: db.collection('pages').doc('site_a__page_a'),
                     replyTo: null,
