@@ -110,7 +110,16 @@ module.exports = function fixtureData(db) {
             description: null,
             image: null,
             site: db.collection('sites').doc('site_a'),
-            slug: '%2F',
+            slug: '%2Ffoo%2Fbar',
+            title: null,
+          },
+
+          site_b__page_a: {
+            createdOn: new Date('2017-01-01'),
+            description: null,
+            image: null,
+            site: db.collection('sites').doc('site_b'),
+            slug: '%2Ffoo%2Fbar',
             title: null,
           },
         },
@@ -123,6 +132,32 @@ module.exports = function fixtureData(db) {
             imageUrl: 'site-a.jpg',
             isVerified: true,
             name: 'Site A',
+            theme: 'light',
+
+            __collection__: {
+              admins: {
+                __doc__: {
+                  QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
+                    cloudFirestoreReference: db
+                      .collection('users')
+                      .doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                  },
+                },
+              },
+
+              slugs: {
+                __doc__: {
+                  '%2Ffoo%2Fbar': {},
+                },
+              },
+            },
+          },
+
+          site_b: {
+            hostname: 'site-b.com',
+            imageUrl: 'site-b.jpg',
+            isVerified: true,
+            name: 'Site B',
             theme: 'light',
 
             __collection__: {
@@ -214,6 +249,10 @@ module.exports = function fixtureData(db) {
                 __doc__: {
                   site_a: {
                     cloudFirestoreReference: db.collection('sites').doc('site_a'),
+                  },
+
+                  site_b: {
+                    cloudFirestoreReference: db.collection('sites').doc('site_b'),
                   },
                 },
               },
