@@ -209,6 +209,7 @@ module.exports = function fixtureData(db) {
           QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
             facebookAccessToken: '12345',
             hasNewNotification: false,
+            notificationTokens: [],
           },
         },
       },
