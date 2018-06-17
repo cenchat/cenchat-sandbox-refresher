@@ -15,14 +15,14 @@ module.exports = function fixtureData(db) {
         __doc__: {
           comment_a: {
             attachments: null,
-            author: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+            author: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
             createdOn: new Date('2017-01-01'),
             isAskMeAnything: true,
             isDeleted: false,
-            page: db.collection('pages').doc('site_a__page_a'),
+            page: db.doc('pages/site_a__page_a'),
             replyTo: null,
             root: null,
-            site: db.collection('sites').doc('site_a'),
+            site: db.doc('sites/site_a'),
             status: 'approved',
             taggedEntities: null,
             text: 'Foobar',
@@ -30,14 +30,14 @@ module.exports = function fixtureData(db) {
 
           comment_b: {
             attachments: null,
-            author: db.collection('users').doc('p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+            author: db.doc('users/p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
             createdOn: new Date('2017-01-01'),
             isAskMeAnything: false,
             isDeleted: false,
-            page: db.collection('pages').doc('site_a__page_a'),
-            replyTo: db.collection('comments').doc('comment_a'),
-            root: db.collection('comments').doc('comment_a'),
-            site: db.collection('sites').doc('site_a'),
+            page: db.doc('pages/site_a__page_a'),
+            replyTo: db.doc('comments/comment_a'),
+            root: db.doc('comments/comment_a'),
+            site: db.doc('sites/site_a'),
             status: 'approved',
             taggedEntities: null,
             text: 'Hello World',
@@ -45,14 +45,14 @@ module.exports = function fixtureData(db) {
 
           comment_c: {
             attachments: [{ id: 'sticker_a1', type: 'sticker' }],
-            author: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+            author: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
             createdOn: new Date('2017-01-01'),
             isAskMeAnything: false,
             isDeleted: false,
-            page: db.collection('pages').doc('site_a__page_a'),
-            replyTo: db.collection('comments').doc('comment_b'),
-            root: db.collection('comments').doc('comment_a'),
-            site: db.collection('sites').doc('site_a'),
+            page: db.doc('pages/site_a__page_a'),
+            replyTo: db.doc('comments/comment_b'),
+            root: db.doc('comments/comment_a'),
+            site: db.doc('sites/site_a'),
             status: 'approved',
             taggedEntities: null,
             text: null,
@@ -60,14 +60,14 @@ module.exports = function fixtureData(db) {
 
           comment_d: {
             attachments: null,
-            author: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+            author: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
             createdOn: new Date('2017-01-01'),
             isAskMeAnything: false,
             isDeleted: true,
-            page: db.collection('pages').doc('site_a__page_a'),
+            page: db.doc('pages/site_a__page_a'),
             replyTo: null,
             root: null,
-            site: db.collection('sites').doc('site_a'),
+            site: db.doc('sites/site_a'),
             status: 'approved',
             taggedEntities: null,
             text: null,
@@ -75,14 +75,14 @@ module.exports = function fixtureData(db) {
 
           comment_e: {
             attachments: null,
-            author: db.collection('users').doc('p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+            author: db.doc('users/p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
             createdOn: new Date('2017-01-01'),
             isAskMeAnything: false,
             isDeleted: false,
-            page: db.collection('pages').doc('site_a__page_a'),
-            replyTo: db.collection('comments').doc('comment_a'),
-            root: db.collection('comments').doc('comment_a'),
-            site: db.collection('sites').doc('site_a'),
+            page: db.doc('pages/site_a__page_a'),
+            replyTo: db.doc('comments/comment_a'),
+            root: db.doc('comments/comment_a'),
+            site: db.doc('sites/site_a'),
             status: 'rejected',
             taggedEntities: null,
             text: 'Hello World',
@@ -93,7 +93,7 @@ module.exports = function fixtureData(db) {
       facebookIds: {
         __doc__: {
           facebookid_a: {
-            cloudFirestoreReference: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+            cloudFirestoreReference: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
           },
         },
       },
@@ -108,8 +108,8 @@ module.exports = function fixtureData(db) {
             },
             createdOn: new Date('2017-01-01'),
             type: 'follow',
-            from: db.collection('users').doc('p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
-            to: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+            from: db.doc('users/p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+            to: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
           },
 
           notification_b: {
@@ -120,8 +120,8 @@ module.exports = function fixtureData(db) {
             },
             createdOn: new Date('2017-01-01'),
             type: 'follow',
-            from: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
-            to: db.collection('users').doc('p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+            from: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+            to: db.doc('users/p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
           },
         },
       },
@@ -132,7 +132,7 @@ module.exports = function fixtureData(db) {
             createdOn: new Date('2017-01-01'),
             description: null,
             image: null,
-            site: db.collection('sites').doc('site_a'),
+            site: db.doc('sites/site_a'),
             slug: '%2Ffoo%2Fbar',
             title: null,
           },
@@ -141,7 +141,7 @@ module.exports = function fixtureData(db) {
             createdOn: new Date('2017-01-01'),
             description: null,
             image: null,
-            site: db.collection('sites').doc('site_b'),
+            site: db.doc('sites/site_b'),
             slug: '%2Ffoo%2Fbar',
             title: null,
           },
@@ -161,9 +161,8 @@ module.exports = function fixtureData(db) {
               admins: {
                 __doc__: {
                   QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
-                    cloudFirestoreReference: db
-                      .collection('users')
-                      .doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    cloudFirestoreReference: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    name: 'test user 1',
                   },
                 },
               },
@@ -187,9 +186,8 @@ module.exports = function fixtureData(db) {
               admins: {
                 __doc__: {
                   QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
-                    cloudFirestoreReference: db
-                      .collection('users')
-                      .doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    cloudFirestoreReference: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    name: 'test user 1',
                   },
                 },
               },
@@ -217,7 +215,7 @@ module.exports = function fixtureData(db) {
       usernames: {
         __doc__: {
           username_a: {
-            cloudFirestoreReference: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+            cloudFirestoreReference: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
           },
         },
       },
@@ -228,6 +226,7 @@ module.exports = function fixtureData(db) {
             displayName: 'Test User 1',
             displayUsername: 'username_a',
             facebookId: 'facebookid_a',
+            name: 'test user 1',
             photoUrl: 'test_user1.jpg',
             username: 'username_a',
 
@@ -236,14 +235,14 @@ module.exports = function fixtureData(db) {
                 __doc__: {
                   comment_b: {
                     attachments: null,
-                    author: db.collection('users').doc('p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+                    author: db.doc('users/p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
                     createdOn: new Date('2017-01-01'),
                     isAskMeAnything: false,
                     isDeleted: false,
-                    page: db.collection('pages').doc('site_a__page_a'),
-                    replyTo: db.collection('comments').doc('comment_a'),
-                    root: db.collection('comments').doc('comment_a'),
-                    site: db.collection('sites').doc('site_a'),
+                    page: db.doc('pages/site_a__page_a'),
+                    replyTo: db.doc('comments/comment_a'),
+                    root: db.doc('comments/comment_a'),
+                    site: db.doc('sites/site_a'),
                     status: 'approved',
                     taggedEntities: null,
                     text: 'Hello World',
@@ -251,14 +250,14 @@ module.exports = function fixtureData(db) {
 
                   comment_e: {
                     attachments: null,
-                    author: db.collection('users').doc('p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+                    author: db.doc('users/p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
                     createdOn: new Date('2017-01-01'),
                     isAskMeAnything: false,
                     isDeleted: false,
-                    page: db.collection('pages').doc('site_a__page_a'),
-                    replyTo: db.collection('comments').doc('comment_a'),
-                    root: db.collection('comments').doc('comment_a'),
-                    site: db.collection('sites').doc('site_a'),
+                    page: db.doc('pages/site_a__page_a'),
+                    replyTo: db.doc('comments/comment_a'),
+                    root: db.doc('comments/comment_a'),
+                    site: db.doc('sites/site_a'),
                     status: 'rejected',
                     taggedEntities: null,
                     text: 'Hello World',
@@ -269,9 +268,8 @@ module.exports = function fixtureData(db) {
               followers: {
                 __doc__: {
                   p6dbUKSNnrh4QI4MDuZCMOs07Vt2: {
-                    cloudFirestoreReference: db
-                      .collection('users')
-                      .doc('p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+                    cloudFirestoreReference: db.doc('users/p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+                    name: 'test user 2',
                   },
                 },
               },
@@ -279,9 +277,8 @@ module.exports = function fixtureData(db) {
               followings: {
                 __doc__: {
                   p6dbUKSNnrh4QI4MDuZCMOs07Vt2: {
-                    cloudFirestoreReference: db
-                      .collection('users')
-                      .doc('p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+                    cloudFirestoreReference: db.doc('users/p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+                    name: 'test user 2',
                   },
                 },
               },
@@ -289,11 +286,11 @@ module.exports = function fixtureData(db) {
               sitesAsAdmin: {
                 __doc__: {
                   site_a: {
-                    cloudFirestoreReference: db.collection('sites').doc('site_a'),
+                    cloudFirestoreReference: db.doc('sites/site_a'),
                   },
 
                   site_b: {
-                    cloudFirestoreReference: db.collection('sites').doc('site_b'),
+                    cloudFirestoreReference: db.doc('sites/site_b'),
                   },
                 },
               },
@@ -303,6 +300,7 @@ module.exports = function fixtureData(db) {
           p6dbUKSNnrh4QI4MDuZCMOs07Vt2: {
             displayName: 'Test User 2',
             displayUsername: null,
+            name: 'test user 2',
             photoUrl: null,
             username: null,
 
@@ -311,14 +309,14 @@ module.exports = function fixtureData(db) {
                 __doc__: {
                   comment_a: {
                     attachments: null,
-                    author: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    author: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
                     createdOn: new Date('2017-01-01'),
                     isAskMeAnything: true,
                     isDeleted: false,
-                    page: db.collection('pages').doc('site_a__page_a'),
+                    page: db.doc('pages/site_a__page_a'),
                     replyTo: null,
                     root: null,
-                    site: db.collection('sites').doc('site_a'),
+                    site: db.doc('sites/site_a'),
                     status: 'approved',
                     taggedEntities: null,
                     text: 'Foobar',
@@ -326,14 +324,14 @@ module.exports = function fixtureData(db) {
 
                   comment_c: {
                     attachments: [{ id: 'sticker_a1', type: 'sticker' }],
-                    author: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    author: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
                     createdOn: new Date('2017-01-01'),
                     isAskMeAnything: false,
                     isDeleted: false,
-                    page: db.collection('pages').doc('site_a__page_a'),
-                    replyTo: db.collection('comments').doc('comment_b'),
-                    root: db.collection('comments').doc('comment_a'),
-                    site: db.collection('sites').doc('site_a'),
+                    page: db.doc('pages/site_a__page_a'),
+                    replyTo: db.doc('comments/comment_b'),
+                    root: db.doc('comments/comment_a'),
+                    site: db.doc('sites/site_a'),
                     status: 'approved',
                     taggedEntities: null,
                     text: null,
@@ -341,14 +339,14 @@ module.exports = function fixtureData(db) {
 
                   comment_d: {
                     attachments: null,
-                    author: db.collection('users').doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    author: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
                     createdOn: new Date('2017-01-01'),
                     isAskMeAnything: false,
                     isDeleted: true,
-                    page: db.collection('pages').doc('site_a__page_a'),
+                    page: db.doc('pages/site_a__page_a'),
                     replyTo: null,
                     root: null,
-                    site: db.collection('sites').doc('site_a'),
+                    site: db.doc('sites/site_a'),
                     status: 'approved',
                     taggedEntities: null,
                     text: null,
@@ -359,9 +357,8 @@ module.exports = function fixtureData(db) {
               followers: {
                 __doc__: {
                   QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
-                    cloudFirestoreReference: db
-                      .collection('users')
-                      .doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    cloudFirestoreReference: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    name: 'test user 1',
                   },
                 },
               },
@@ -369,9 +366,8 @@ module.exports = function fixtureData(db) {
               followings: {
                 __doc__: {
                   QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
-                    cloudFirestoreReference: db
-                      .collection('users')
-                      .doc('QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    cloudFirestoreReference: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+                    name: 'test user 1',
                   },
                 },
               },
@@ -381,6 +377,7 @@ module.exports = function fixtureData(db) {
           hLDKdOlRTaO6kQROMAcBEzscFAk1: {
             displayName: 'Test User 3',
             displayUsername: null,
+            name: 'test user 3',
             photoUrl: null,
             username: null,
           },
