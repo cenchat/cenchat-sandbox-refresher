@@ -205,7 +205,7 @@ module.exports = function fixtureData(db) {
       userMetaInfos: {
         __doc__: {
           QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
-            facebookAccessToken: '12345',
+            accessToken: { facebook: '12345' },
             hasNewNotification: false,
             notificationTokens: [],
           },
@@ -225,9 +225,9 @@ module.exports = function fixtureData(db) {
           QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
             displayName: 'Test User 1',
             displayUsername: 'username_a',
-            facebookId: 'facebookid_a',
             name: 'test user 1',
             photoUrl: 'test_user1.jpg',
+            provider: { facebook: 'facebookid_a' },
             username: 'username_a',
 
             __collection__: {
@@ -302,6 +302,8 @@ module.exports = function fixtureData(db) {
             displayUsername: null,
             name: 'test user 2',
             photoUrl: null,
+            provider: {},
+            shortBio: null,
             username: null,
 
             __collection__: {
@@ -379,6 +381,8 @@ module.exports = function fixtureData(db) {
             displayUsername: null,
             name: 'test user 3',
             photoUrl: null,
+            provider: {},
+            shortBio: null,
             username: null,
           },
         },
