@@ -228,6 +228,7 @@ module.exports = function fixtureData(db) {
             name: 'test user 1',
             photoUrl: 'test_user1.jpg',
             provider: { facebook: 'facebookid_a' },
+            shortBio: null,
             username: 'username_a',
 
             __collection__: {
