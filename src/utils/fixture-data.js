@@ -207,7 +207,7 @@ module.exports = function fixtureData(db) {
           QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
             accessToken: { facebook: '12345' },
             hasNewNotification: false,
-            notificationTokens: [],
+            notificationTokens: null,
           },
         },
       },
@@ -303,7 +303,7 @@ module.exports = function fixtureData(db) {
             displayUsername: null,
             name: 'test user 2',
             photoUrl: null,
-            provider: {},
+            provider: null,
             shortBio: null,
             username: null,
 
@@ -382,7 +382,7 @@ module.exports = function fixtureData(db) {
             displayUsername: null,
             name: 'test user 3',
             photoUrl: null,
-            provider: {},
+            provider: null,
             shortBio: null,
             username: null,
           },
