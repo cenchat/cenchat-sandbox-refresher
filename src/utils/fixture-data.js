@@ -1,16 +1,6 @@
 module.exports = function fixtureData(db) {
   return {
     __collection__: {
-      betaTesters: {
-        __doc__: {
-          QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
-            monthlyViews: 'lt-1m',
-            status: 'approved',
-            website: 'https://site-a.com',
-          },
-        },
-      },
-
       comments: {
         __doc__: {
           comment_a: {
