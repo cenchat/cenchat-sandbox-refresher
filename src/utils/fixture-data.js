@@ -184,7 +184,7 @@ module.exports = function fixtureData(db) {
             hasNewNotification: false,
             notificationTokens: null,
           },
-          
+
           user_b: {
             accessToken: null,
             hasNewNotification: false,
