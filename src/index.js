@@ -8,7 +8,7 @@ const helmet = require('helmet');
 const setupTestDataRoute = require('./routes/setup-test-data');
 const teardownTestDataRoute = require('./routes/teardown-test-data');
 
-admin.initializeApp();
+admin.initializeApp(functions.config().firebase);
 
 const app = express();
 

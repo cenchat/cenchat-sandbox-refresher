@@ -40,7 +40,7 @@ function batchDeleteData(batch, data, ref) {
  */
 async function tearDownTestAccounts(admin) {
   const auth = admin.auth();
-  const { users } = await admin.listUsers();
+  const { users } = await auth.listUsers();
   const userDeleteRequests = users.map(user => auth.deleteUser(user.uid));
 
   return Promise.all(userDeleteRequests);
@@ -55,21 +55,15 @@ function teardownTestData(admin) {
   const db = admin.firestore();
   const batch = db.batch();
   const data = {
-    betaTesters: {},
-    comments: {},
+    chats: {},
     defaultStickerPacks: {},
-    facebookIds: {},
     notifications: {},
     pages: {},
     sites: { admins: {}, slugs: {} },
     stickerPacks: {},
     stickers: {},
     userMetaInfos: {},
-    usernames: {},
     users: {
-      followingComments: {},
-      followings: {},
-      followers: {},
       sitesAsAdmin: {},
       stickerPacks: {},
     },

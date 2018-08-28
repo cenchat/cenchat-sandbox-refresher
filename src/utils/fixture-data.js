@@ -5,7 +5,7 @@ module.exports = function fixtureData(db) {
         __doc__: {
           chat_a: {
             creator: db.doc('users/user_b'),
-            description: db.doc('User A: Hello'),
+            description: 'User A: Hello',
             isPublicized: true,
             lastActivityTimestamp: new Date('2017-01-01'),
             name: 'Site A',
