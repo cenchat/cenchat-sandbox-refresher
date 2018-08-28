@@ -1,14 +1,14 @@
 const express = require('express');
 
 const fixtureData = require('../../utils/fixture-data');
+const testAccounts = require('../../utils/test-accounts');
 
 /**
- * Batch writes a given test data
- *
  * @param {firebase.firestore.WriteBatch} batch
  * @param {Object} data
  * @param {firebase.firestore.CollectionReference} ref
  * @param {string} id
+ * @function
  */
 function batchWriteData(batch, data, ref, id) {
   if (id) {
@@ -34,10 +34,21 @@ function batchWriteData(batch, data, ref, id) {
 }
 
 /**
- * Setup test data
- *
+ * @param {admin} admin
+ * @return {Promise} Resolves once all test accounts have been created
+ * @function
+ */
+function setupTestAccounts(admin) {
+  const accounts = testAccounts();
+  const accountCreateRequests = accounts.map(account => admin.auth().createUser(account));
+
+  return Promise.all(accountCreateRequests);
+}
+
+/**
  * @param {admin} admin
  * @return {Promise} Resolves once setting up test data completes
+ * @function
  */
 function setupTestData(admin) {
   const db = admin.firestore();
@@ -50,20 +61,23 @@ function setupTestData(admin) {
 }
 
 /**
- * Handles POST request
- *
  * @param {firebase} admin
  * @return {Function} Handler
+ * @function
  */
 function handlePostRequest(admin) {
-  return (req, res) => setupTestData(admin).then(() => res.status(204).send());
+  return async (req, res) => {
+    await setupTestAccounts(admin);
+    await setupTestData(admin);
+
+    return res.status(204).send();
+  };
 }
 
 /**
- * Entry function
- *
  * @param {FirebaseAdmin} admin
  * @return {Router} Express router
+ * @function
  */
 function main(admin) {
   const router = new express.Router();

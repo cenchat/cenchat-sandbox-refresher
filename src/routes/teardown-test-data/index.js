@@ -1,12 +1,11 @@
 const express = require('express');
 
 /**
- * Batch delete data
- *
  * @param {firebase.firestore.WriteBatch} batch
  * @param {Object} data
  * @param {firebase.firestore.CollectionReference|firebase.firestore.DocumentReference} ref
  * @return {Promise} Resolves once all data have been batched for delete
+ * @function
  */
 function batchDeleteData(batch, data, ref) {
   const promises = [];
@@ -35,10 +34,22 @@ function batchDeleteData(batch, data, ref) {
 }
 
 /**
- * Deletes test data
- *
+ * @param {admin} admin
+ * @return {Promise} Resolves once all test accounts have been deleted
+ * @function
+ */
+async function tearDownTestAccounts(admin) {
+  const auth = admin.auth();
+  const { users } = await admin.listUsers();
+  const userDeleteRequests = users.map(user => auth.deleteUser(user.uid));
+
+  return Promise.all(userDeleteRequests);
+}
+
+/**
  * @param {admin} admin
  * @return {Promise} Resolves once all data have been deleted
+ * @function
  */
 function teardownTestData(admin) {
   const db = admin.firestore();
@@ -68,20 +79,23 @@ function teardownTestData(admin) {
 }
 
 /**
- * Handles POST request
- *
  * @param {firebase} admin
  * @return {Function} Handler
+ * @function
  */
 function handlePostRequest(admin) {
-  return (req, res) => teardownTestData(admin).then(() => res.status(204).send());
+  return async (req, res) => {
+    await tearDownTestAccounts(admin);
+    await teardownTestData(admin);
+
+    return res.status(204).send();
+  };
 }
 
 /**
- * Entry function
- *
  * @param {FirebaseAdmin} admin
  * @return {Router} Express router
+ * @function
  */
 function main(admin) {
   const router = new express.Router();
