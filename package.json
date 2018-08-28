@@ -1,10 +1,10 @@
 {
-  "name": "cenchat-sandbox-refresher",
+  "name": "cenchat-web-test-data-refresher",
   "version": "0.0.0",
   "private": true,
-  "description": "Test data refresher for Cenchat Sandbox",
+  "description": "Test data refresher for web.cenchat.com",
   "main": "src/index.js",
-  "repository": "https://github.com/cenchat/cenchat-sandbox-refresher",
+  "repository": "https://github.com/cenchat/cenchat-web-test-data-refresher",
   "scripts": {
     "start": "firebase serve",
     "deploy": "firebase deploy",
@@ -13,20 +13,20 @@
   "author": "Cenchat",
   "license": "GPL-3.0",
   "engines": {
-    "node": ">= 8.9"
+    "node": "8"
   },
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.3",
-    "firebase-admin": "^5.12.0",
-    "firebase-functions": "^1.0.2",
-    "helmet": "^3.12.0"
+    "firebase-admin": "^6.0.0",
+    "firebase-functions": "^2.0.5",
+    "helmet": "^3.13.0"
   },
   "devDependencies": {
-    "eslint": "^4.16.0",
+    "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-rmmmp": "^0.2.1",
-    "eslint-plugin-import": "^2.11.0",
-    "firebase-tools": "^3.18.4"
+    "eslint-config-rmmmp": "^0.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "firebase-tools": "^4.2.0"
   }
 }

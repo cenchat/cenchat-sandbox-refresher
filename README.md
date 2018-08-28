@@ -1,6 +1,6 @@
-# cenchat-sandbox-refresher
+# cenchat-web-test-data-refresher
 
-Test data refresher for Cenchat Sandbox
+Test data refresher for [web.cenchat.com](https://web.cenchat.com)
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd cenchat-sandbox-refresher`
+* `cd cenchat-web-test-data-refresher`
 * `npm install`
 
 ## Running / Development
