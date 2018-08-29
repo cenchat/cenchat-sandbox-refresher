@@ -155,28 +155,28 @@ module.exports = function fixtureData(db) {
             description: 'Sad',
             imageUrl: 'https://firebasestorage.googleapis.com/v0/b/cenchat-prod.appspot.com/o/stickers%2Fy2viRS322OSh1jCY2Z8T%2Fsad.png?alt=media&token=23c8de07-a228-4d49-9cb1-ff53e36d515b',
             keywords: ['sad', 'cry', 'huhuhu'],
-            pack: 'sticker_pack_a',
+            pack: db.doc('stickerPacks/sticker_pack_a'),
           },
 
           sticker_a2: {
             description: 'Much awesome',
             imageUrl: 'https://firebasestorage.googleapis.com/v0/b/cenchat-prod.appspot.com/o/stickers%2Fy2viRS322OSh1jCY2Z8T%2Fmuch_awesome.png?alt=media&token=6df822af-1451-44ac-aba1-d6986fa2c66f',
             keywords: ['much awesome', 'awesome'],
-            pack: 'sticker_pack_a',
+            pack: db.doc('stickerPacks/sticker_pack_a'),
           },
 
           sticker_b1: {
             description: 'Yummy!',
             imageUrl: 'https://firebasestorage.googleapis.com/v0/b/cenchat-prod.appspot.com/o/stickers%2FGVMKSSnNwzEMuKTh9d3k%2Fyummy.png?alt=media&token=b96af174-045c-4b68-b586-01f341283bd6',
             keywords: ['yummy', 'yum', 'mmm', 'nom nom nom'],
-            pack: 'sticker_pack_b',
+            pack: db.doc('stickerPacks/sticker_pack_b'),
           },
 
           sticker_b2: {
             description: 'Have you seen this?',
             imageUrl: 'https://firebasestorage.googleapis.com/v0/b/cenchat-prod.appspot.com/o/stickers%2FGVMKSSnNwzEMuKTh9d3k%2Fhave_you_seen_this.png?alt=media&token=c1b63b7e-fcdf-40f5-89f0-b6a8a92f2686',
             keywords: ['have you seen this?', 'check this out', 'look'],
-            pack: 'sticker_pack_b',
+            pack: db.doc('stickerPacks/sticker_pack_b'),
           },
         },
       },
