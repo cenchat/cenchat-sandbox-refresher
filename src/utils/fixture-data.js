@@ -76,10 +76,12 @@ module.exports = function fixtureData(db) {
       sites: {
         __doc__: {
           site_a: {
+            brandColor: '#03a9f4',
+            displayName: 'Site A',
             hostname: 'site-a.com',
             imageUrl: 'site-a.jpg',
             isVerified: true,
-            name: 'Site A',
+            name: 'site a',
             theme: 'light',
 
             __collection__: {
@@ -101,10 +103,12 @@ module.exports = function fixtureData(db) {
           },
 
           site_b: {
+            brandColor: '#009688',
+            displayName: 'Site B',
             hostname: 'site-b.com',
             imageUrl: 'site-b.jpg',
             isVerified: true,
-            name: 'Site B',
+            name: 'site b',
             theme: 'light',
 
             __collection__: {
