@@ -5,12 +5,56 @@ module.exports = function fixtureData(db) {
         __doc__: {
           chat_a: {
             creator: db.doc('users/user_b'),
-            description: 'User A: Hello',
+            description: 'User A: Message I',
             isPublicized: true,
-            lastActivityTimestamp: new Date('2017-01-01'),
+            lastActivityTimestamp: new Date('2017-01-02'),
             name: 'Site A',
             page: db.doc('pages/site_a__page_a'),
-            publicizedTitle: 'Publicized Chat A',
+            publicizedTitle: 'Message A',
+            site: db.doc('sites/site_a'),
+          },
+
+          chat_b: {
+            creator: db.doc('users/user_c'),
+            description: 'User A: Message J',
+            isPublicized: true,
+            lastActivityTimestamp: new Date('2017-01-02'),
+            name: 'Site A',
+            page: db.doc('pages/site_a__page_a'),
+            publicizedTitle: 'Message J',
+            site: db.doc('sites/site_a'),
+          },
+
+          chat_c: {
+            creator: db.doc('users/user_d'),
+            description: 'User A: Message K',
+            isPublicized: true,
+            lastActivityTimestamp: new Date('2017-01-02'),
+            name: 'Site A',
+            page: db.doc('pages/site_a__page_a'),
+            publicizedTitle: 'Message K',
+            site: db.doc('sites/site_a'),
+          },
+
+          chat_d: {
+            creator: db.doc('users/user_e'),
+            description: 'User A: Message L',
+            isPublicized: true,
+            lastActivityTimestamp: new Date('2017-01-02'),
+            name: 'Site A',
+            page: db.doc('pages/site_a__page_a'),
+            publicizedTitle: 'Message L',
+            site: db.doc('sites/site_a'),
+          },
+
+          chat_e: {
+            creator: db.doc('users/user_f'),
+            description: 'User A: Message M',
+            isPublicized: true,
+            lastActivityTimestamp: new Date('2017-01-02'),
+            name: 'Site A',
+            page: db.doc('pages/site_a__page_a'),
+            publicizedTitle: 'Message M',
             site: db.doc('sites/site_a'),
           },
         },
@@ -23,30 +67,110 @@ module.exports = function fixtureData(db) {
         },
       },
 
-      notifications: {
+      messages: {
         __doc__: {
-          notification_a: {
-            dataMessage: null,
-            displayMessage: {
-              body: null,
-              title: 'Test User 2 started following you',
-            },
+          message_a: {
             createdOn: new Date('2017-01-01'),
-            type: 'follow',
-            from: db.doc('users/p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
-            to: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
+            media: null,
+            text: 'Message A',
+            author: db.doc('users/user_b'),
+            chat: db.doc('chats/chat_a'),
           },
 
-          notification_b: {
-            dataMessage: null,
-            displayMessage: {
-              body: null,
-              title: 'Test User 1 started following you',
-            },
+          message_b: {
             createdOn: new Date('2017-01-01'),
-            type: 'follow',
-            from: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
-            to: db.doc('users/p6dbUKSNnrh4QI4MDuZCMOs07Vt2'),
+            media: { id: 'sticker_a1', type: 'sticker' },
+            text: null,
+            author: db.doc('users/user_b'),
+            chat: db.doc('chats/chat_a'),
+          },
+
+          message_c: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message C',
+            author: db.doc('users/user_a'),
+            chat: db.doc('chats/chat_a'),
+          },
+
+          message_d: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message D',
+            author: db.doc('users/user_b'),
+            chat: db.doc('chats/chat_a'),
+          },
+
+          message_e: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message E',
+            author: db.doc('users/user_b'),
+            chat: db.doc('chats/chat_a'),
+          },
+
+          message_f: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message F',
+            author: db.doc('users/user_b'),
+            chat: db.doc('chats/chat_a'),
+          },
+
+          message_g: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message G',
+            author: db.doc('users/user_b'),
+            chat: db.doc('chats/chat_a'),
+          },
+
+          message_h: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message H',
+            author: db.doc('users/user_b'),
+            chat: db.doc('chats/chat_a'),
+          },
+          
+          message_i: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message I',
+            author: db.doc('users/user_a'),
+            chat: db.doc('chats/chat_a'),
+          },
+
+          message_j: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message J',
+            author: db.doc('users/user_c'),
+            chat: db.doc('chats/chat_a'),
+          },
+
+          message_k: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message K',
+            author: db.doc('users/user_d'),
+            chat: db.doc('chats/chat_a'),
+          },
+
+          message_l: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message L',
+            author: db.doc('users/user_e'),
+            chat: db.doc('chats/chat_a'),
+          },
+
+          message_m: {
+            createdOn: new Date('2017-01-02'),
+            media: null,
+            text: 'Message M',
+            author: db.doc('users/user_f'),
+            chat: db.doc('chats/chat_a'),
           },
         },
       },
@@ -87,9 +211,9 @@ module.exports = function fixtureData(db) {
             __collection__: {
               admins: {
                 __doc__: {
-                  QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
-                    cloudFirestoreReference: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
-                    name: 'test user 1',
+                  user_a: {
+                    cloudFirestoreReference: db.doc('users/user_a'),
+                    name: 'test user a',
                   },
                 },
               },
@@ -114,9 +238,9 @@ module.exports = function fixtureData(db) {
             __collection__: {
               admins: {
                 __doc__: {
-                  QA8FnqTTt2NpIKl2VDHWqYwQKvQ2: {
-                    cloudFirestoreReference: db.doc('users/QA8FnqTTt2NpIKl2VDHWqYwQKvQ2'),
-                    name: 'test user 1',
+                  user_a: {
+                    cloudFirestoreReference: db.doc('users/user_a'),
+                    name: 'test user a',
                   },
                 },
               },
@@ -194,13 +318,37 @@ module.exports = function fixtureData(db) {
             hasNewNotification: false,
             notificationTokens: null,
           },
+
+          user_c: {
+            accessToken: null,
+            hasNewNotification: false,
+            notificationTokens: null,
+          },
+
+          user_d: {
+            accessToken: null,
+            hasNewNotification: false,
+            notificationTokens: null,
+          },
+
+          user_e: {
+            accessToken: null,
+            hasNewNotification: false,
+            notificationTokens: null,
+          },
+
+          user_f: {
+            accessToken: null,
+            hasNewNotification: false,
+            notificationTokens: null,
+          },
         },
       },
 
       users: {
         __doc__: {
           user_a: {
-            displayName: 'User_A',
+            displayName: 'User A',
             name: 'user a',
             photoUrl: null,
             provider: null,
@@ -217,8 +365,36 @@ module.exports = function fixtureData(db) {
           },
 
           user_b: {
-            displayName: 'user_b',
+            displayName: 'User B',
             name: 'user b',
+            photoUrl: null,
+            provider: null,
+          },
+
+          user_c: {
+            displayName: 'User C',
+            name: 'user c',
+            photoUrl: null,
+            provider: null,
+          },
+
+          user_d: {
+            displayName: 'User D',
+            name: 'user d',
+            photoUrl: null,
+            provider: null,
+          },
+
+          user_e: {
+            displayName: 'User E',
+            name: 'user e',
+            photoUrl: null,
+            provider: null,
+          },
+
+          user_f: {
+            displayName: 'User F',
+            name: 'user f',
             photoUrl: null,
             provider: null,
           },

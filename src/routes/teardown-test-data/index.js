@@ -58,6 +58,7 @@ function teardownTestData(admin) {
     chats: {},
     defaultStickerPacks: {},
     notifications: {},
+    messages: {},
     pages: {},
     sites: { admins: {}, slugs: {} },
     stickerPacks: {},
