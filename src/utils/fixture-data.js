@@ -146,7 +146,7 @@ module.exports = function fixtureData(db) {
             media: null,
             text: 'Message J',
             author: db.doc('users/user_c'),
-            chat: db.doc('chats/chat_a'),
+            chat: db.doc('chats/chat_b'),
           },
 
           message_k: {
@@ -154,7 +154,7 @@ module.exports = function fixtureData(db) {
             media: null,
             text: 'Message K',
             author: db.doc('users/user_d'),
-            chat: db.doc('chats/chat_a'),
+            chat: db.doc('chats/chat_c'),
           },
 
           message_l: {
@@ -162,7 +162,7 @@ module.exports = function fixtureData(db) {
             media: null,
             text: 'Message L',
             author: db.doc('users/user_e'),
-            chat: db.doc('chats/chat_a'),
+            chat: db.doc('chats/chat_d'),
           },
 
           message_m: {
@@ -170,7 +170,7 @@ module.exports = function fixtureData(db) {
             media: null,
             text: 'Message M',
             author: db.doc('users/user_f'),
-            chat: db.doc('chats/chat_a'),
+            chat: db.doc('chats/chat_e'),
           },
         },
       },
