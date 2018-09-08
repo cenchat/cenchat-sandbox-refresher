@@ -16,7 +16,7 @@ module.exports = function fixtureData(db) {
 
           chat_b: {
             creator: db.doc('users/user_c'),
-            description: 'User A: Message J',
+            description: 'User C: Message J',
             isPublicized: true,
             lastActivityTimestamp: new Date('2017-01-02'),
             name: 'Site A',
@@ -27,7 +27,7 @@ module.exports = function fixtureData(db) {
 
           chat_c: {
             creator: db.doc('users/user_d'),
-            description: 'User A: Message K',
+            description: 'User D: Message K',
             isPublicized: true,
             lastActivityTimestamp: new Date('2017-01-02'),
             name: 'Site A',
@@ -38,7 +38,7 @@ module.exports = function fixtureData(db) {
 
           chat_d: {
             creator: db.doc('users/user_e'),
-            description: 'User A: Message L',
+            description: 'User E: Message L',
             isPublicized: true,
             lastActivityTimestamp: new Date('2017-01-02'),
             name: 'Site A',
@@ -49,7 +49,7 @@ module.exports = function fixtureData(db) {
 
           chat_e: {
             creator: db.doc('users/user_f'),
-            description: 'User A: Message M',
+            description: 'User F: Message M',
             isPublicized: true,
             lastActivityTimestamp: new Date('2017-01-02'),
             name: 'Site A',
