@@ -5,10 +5,9 @@ module.exports = function fixtureData(db) {
         __doc__: {
           chat_a: {
             creator: db.doc('users/user_b'),
-            description: 'User A: Message I',
             isPublicized: true,
             lastActivityTimestamp: new Date('2017-01-02'),
-            name: 'Site A',
+            lastMessage: db.doc('messages/message_i'),
             page: db.doc('pages/site_a__page_a'),
             publicizedTitle: 'Message A',
             site: db.doc('sites/site_a'),
@@ -16,10 +15,9 @@ module.exports = function fixtureData(db) {
 
           chat_b: {
             creator: db.doc('users/user_c'),
-            description: 'User C: Message J',
             isPublicized: true,
             lastActivityTimestamp: new Date('2017-01-02'),
-            name: 'Site A',
+            lastMessage: db.doc('messages/message_j'),
             page: db.doc('pages/site_a__page_a'),
             publicizedTitle: 'Message J',
             site: db.doc('sites/site_a'),
@@ -27,10 +25,9 @@ module.exports = function fixtureData(db) {
 
           chat_c: {
             creator: db.doc('users/user_d'),
-            description: 'User D: Message K',
             isPublicized: true,
             lastActivityTimestamp: new Date('2017-01-02'),
-            name: 'Site A',
+            lastMessage: db.doc('messages/message_k'),
             page: db.doc('pages/site_a__page_a'),
             publicizedTitle: 'Message K',
             site: db.doc('sites/site_a'),
@@ -38,10 +35,9 @@ module.exports = function fixtureData(db) {
 
           chat_d: {
             creator: db.doc('users/user_e'),
-            description: 'User E: Message L',
             isPublicized: true,
             lastActivityTimestamp: new Date('2017-01-02'),
-            name: 'Site A',
+            lastMessage: db.doc('messages/message_l'),
             page: db.doc('pages/site_a__page_a'),
             publicizedTitle: 'Message L',
             site: db.doc('sites/site_a'),
@@ -49,10 +45,9 @@ module.exports = function fixtureData(db) {
 
           chat_e: {
             creator: db.doc('users/user_f'),
-            description: 'User F: Message M',
             isPublicized: true,
             lastActivityTimestamp: new Date('2017-01-02'),
-            name: 'Site A',
+            lastMessage: db.doc('messages/message_m'),
             page: db.doc('pages/site_a__page_a'),
             publicizedTitle: 'Message M',
             site: db.doc('sites/site_a'),
