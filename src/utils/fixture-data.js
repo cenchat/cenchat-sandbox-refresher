@@ -344,9 +344,11 @@ module.exports = function fixtureData(db) {
         __doc__: {
           user_a: {
             displayName: 'User A',
+            displayUsername: null,
             name: 'user a',
             photoUrl: null,
-            provider: null,
+            provider: {},
+            username: null,
 
             __collection__: {
               sitesAsAdmin: {
@@ -361,37 +363,47 @@ module.exports = function fixtureData(db) {
 
           user_b: {
             displayName: 'User B',
+            displayUsername: null,
             name: 'user b',
             photoUrl: null,
-            provider: null,
+            provider: {},
+            username: null,
           },
 
           user_c: {
             displayName: 'User C',
+            displayUsername: null,
             name: 'user c',
             photoUrl: null,
-            provider: null,
+            provider: {},
+            username: null,
           },
 
           user_d: {
             displayName: 'User D',
+            displayUsername: null,
             name: 'user d',
             photoUrl: null,
-            provider: null,
+            provider: {},
+            username: null,
           },
 
           user_e: {
             displayName: 'User E',
+            displayUsername: null,
             name: 'user e',
             photoUrl: null,
-            provider: null,
+            provider: {},
+            username: null,
           },
 
           user_f: {
             displayName: 'User F',
+            displayUsername: null,
             name: 'user f',
             photoUrl: null,
-            provider: null,
+            provider: {},
+            username: null,
           },
         },
       },
