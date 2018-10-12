@@ -303,39 +303,39 @@ module.exports = function fixtureData(db) {
       userMetaInfos: {
         __doc__: {
           user_a: {
-            accessToken: null,
-            hasNewNotification: false,
-            notificationTokens: null,
+            accessToken: {},
+            notificationTokens: [],
+            unreadChats: [],
           },
 
           user_b: {
-            accessToken: null,
-            hasNewNotification: false,
-            notificationTokens: null,
+            accessToken: {},
+            notificationTokens: [],
+            unreadChats: [],
           },
 
           user_c: {
-            accessToken: null,
-            hasNewNotification: false,
-            notificationTokens: null,
+            accessToken: {},
+            notificationTokens: [],
+            unreadChats: [],
           },
 
           user_d: {
-            accessToken: null,
-            hasNewNotification: false,
-            notificationTokens: null,
+            accessToken: {},
+            notificationTokens: [],
+            unreadChats: [],
           },
 
           user_e: {
-            accessToken: null,
-            hasNewNotification: false,
-            notificationTokens: null,
+            accessToken: {},
+            notificationTokens: [],
+            unreadChats: [],
           },
 
           user_f: {
-            accessToken: null,
-            hasNewNotification: false,
-            notificationTokens: null,
+            accessToken: {},
+            notificationTokens: [],
+            unreadChats: [],
           },
         },
       },
