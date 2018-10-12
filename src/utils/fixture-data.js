@@ -345,6 +345,7 @@ module.exports = function fixtureData(db) {
           user_a: {
             displayName: 'User A',
             displayUsername: null,
+            metaInfo: db.doc('userMetaInfos/user_a'),
             name: 'user a',
             photoUrl: null,
             provider: {},
@@ -364,6 +365,7 @@ module.exports = function fixtureData(db) {
           user_b: {
             displayName: 'User B',
             displayUsername: null,
+            metaInfo: db.doc('userMetaInfos/user_b'),
             name: 'user b',
             photoUrl: null,
             provider: {},
@@ -373,6 +375,7 @@ module.exports = function fixtureData(db) {
           user_c: {
             displayName: 'User C',
             displayUsername: null,
+            metaInfo: db.doc('userMetaInfos/user_c'),
             name: 'user c',
             photoUrl: null,
             provider: {},
@@ -382,6 +385,7 @@ module.exports = function fixtureData(db) {
           user_d: {
             displayName: 'User D',
             displayUsername: null,
+            metaInfo: db.doc('userMetaInfos/user_d'),
             name: 'user d',
             photoUrl: null,
             provider: {},
@@ -391,6 +395,7 @@ module.exports = function fixtureData(db) {
           user_e: {
             displayName: 'User E',
             displayUsername: null,
+            metaInfo: db.doc('userMetaInfos/user_e'),
             name: 'user e',
             photoUrl: null,
             provider: {},
@@ -400,6 +405,7 @@ module.exports = function fixtureData(db) {
           user_f: {
             displayName: 'User F',
             displayUsername: null,
+            metaInfo: db.doc('userMetaInfos/user_f'),
             name: 'user f',
             photoUrl: null,
             provider: {},
