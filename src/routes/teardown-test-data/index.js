@@ -65,6 +65,7 @@ function teardownTestData(admin) {
     stickers: {},
     userMetaInfos: {},
     users: {
+      chats: {},
       sitesAsAdmin: {},
       stickerPacks: {},
     },
