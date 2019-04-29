@@ -5,60 +5,48 @@ module.exports = function fixtureData(db) {
         __doc__: {
           chat_a: {
             creator: db.doc('users/user_b'),
-            isPublicized: true,
+            isPublic: true,
             lastActivityTimestamp: new Date('2017-01-02'),
             lastMessage: db.doc('messages/message_i'),
             page: db.doc('pages/site_a__page_a'),
-            publicizedTitle: 'Message A',
             site: db.doc('sites/site_a'),
           },
 
           chat_b: {
             creator: db.doc('users/user_c'),
-            isPublicized: true,
+            isPublic: true,
             lastActivityTimestamp: new Date('2017-01-02'),
             lastMessage: db.doc('messages/message_j'),
             page: db.doc('pages/site_a__page_a'),
-            publicizedTitle: 'Message J',
             site: db.doc('sites/site_a'),
           },
 
           chat_c: {
             creator: db.doc('users/user_d'),
-            isPublicized: true,
+            isPublic: true,
             lastActivityTimestamp: new Date('2017-01-02'),
             lastMessage: db.doc('messages/message_k'),
             page: db.doc('pages/site_a__page_a'),
-            publicizedTitle: 'Message K',
             site: db.doc('sites/site_a'),
           },
 
           chat_d: {
             creator: db.doc('users/user_e'),
-            isPublicized: true,
+            isPublic: true,
             lastActivityTimestamp: new Date('2017-01-02'),
             lastMessage: db.doc('messages/message_l'),
             page: db.doc('pages/site_a__page_a'),
-            publicizedTitle: 'Message L',
             site: db.doc('sites/site_a'),
           },
 
           chat_e: {
             creator: db.doc('users/user_f'),
-            isPublicized: true,
+            isPublic: true,
             lastActivityTimestamp: new Date('2017-01-02'),
             lastMessage: db.doc('messages/message_m'),
             page: db.doc('pages/site_a__page_a'),
-            publicizedTitle: 'Message M',
             site: db.doc('sites/site_a'),
           },
-        },
-      },
-
-      defaultStickerPacks: {
-        __doc__: {
-          sticker_pack_a: {},
-          sticker_pack_b: {},
         },
       },
 
@@ -74,7 +62,7 @@ module.exports = function fixtureData(db) {
 
           message_b: {
             createdOn: new Date('2017-01-01'),
-            media: { id: 'sticker_a1', type: 'sticker' },
+            media: null,
             text: null,
             author: db.doc('users/user_b'),
             chat: db.doc('chats/chat_a'),
@@ -208,7 +196,7 @@ module.exports = function fixtureData(db) {
                 __doc__: {
                   user_a: {
                     cloudFirestoreReference: db.doc('users/user_a'),
-                    name: 'test user a',
+                    username: 'user_a',
                   },
                 },
               },
@@ -235,7 +223,7 @@ module.exports = function fixtureData(db) {
                 __doc__: {
                   user_a: {
                     cloudFirestoreReference: db.doc('users/user_a'),
-                    name: 'test user a',
+                    username: 'user_a',
                   },
                 },
               },
@@ -250,92 +238,30 @@ module.exports = function fixtureData(db) {
         },
       },
 
-      stickerPacks: {
-        __doc__: {
-          sticker_pack_a: {
-            artist: 'Sticker Pack A Artist',
-            description: 'Sticker Pack A Description',
-            name: 'Sticker Pack A',
-            thumbnailUrl: 'https://firebasestorage.googleapis.com/v0/b/cenchat-prod.appspot.com/o/stickers%2Fy2viRS322OSh1jCY2Z8T%2Fmuch_awesome.png?alt=media&token=6df822af-1451-44ac-aba1-d6986fa2c66f',
-          },
-
-          sticker_pack_b: {
-            artist: 'Sticker Pack B Brtist',
-            description: 'Sticker Pack B Description',
-            name: 'Sticker Pack B',
-            thumbnailUrl: 'https://firebasestorage.googleapis.com/v0/b/cenchat-prod.appspot.com/o/stickers%2FGVMKSSnNwzEMuKTh9d3k%2Fyummy.png?alt=media&token=b96af174-045c-4b68-b586-01f341283bd6',
-          },
-        },
-      },
-
-      stickers: {
-        __doc__: {
-          sticker_a1: {
-            description: 'Sad',
-            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/cenchat-prod.appspot.com/o/stickers%2Fy2viRS322OSh1jCY2Z8T%2Fsad.png?alt=media&token=23c8de07-a228-4d49-9cb1-ff53e36d515b',
-            keywords: ['sad', 'cry', 'huhuhu'],
-            pack: db.doc('stickerPacks/sticker_pack_a'),
-          },
-
-          sticker_a2: {
-            description: 'Much awesome',
-            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/cenchat-prod.appspot.com/o/stickers%2Fy2viRS322OSh1jCY2Z8T%2Fmuch_awesome.png?alt=media&token=6df822af-1451-44ac-aba1-d6986fa2c66f',
-            keywords: ['much awesome', 'awesome'],
-            pack: db.doc('stickerPacks/sticker_pack_a'),
-          },
-
-          sticker_b1: {
-            description: 'Yummy!',
-            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/cenchat-prod.appspot.com/o/stickers%2FGVMKSSnNwzEMuKTh9d3k%2Fyummy.png?alt=media&token=b96af174-045c-4b68-b586-01f341283bd6',
-            keywords: ['yummy', 'yum', 'mmm', 'nom nom nom'],
-            pack: db.doc('stickerPacks/sticker_pack_b'),
-          },
-
-          sticker_b2: {
-            description: 'Have you seen this?',
-            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/cenchat-prod.appspot.com/o/stickers%2FGVMKSSnNwzEMuKTh9d3k%2Fhave_you_seen_this.png?alt=media&token=c1b63b7e-fcdf-40f5-89f0-b6a8a92f2686',
-            keywords: ['have you seen this?', 'check this out', 'look'],
-            pack: db.doc('stickerPacks/sticker_pack_b'),
-          },
-        },
-      },
-
-      userMetaInfos: {
+      usernames: {
         __doc__: {
           user_a: {
-            accessToken: {},
-            notificationTokens: [],
-            unreadChats: [],
+            cloudFirestoreReference: db.doc('users/user_a'),
           },
 
           user_b: {
-            accessToken: {},
-            notificationTokens: [],
-            unreadChats: [],
+            cloudFirestoreReference: db.doc('users/user_b'),
           },
 
           user_c: {
-            accessToken: {},
-            notificationTokens: [],
-            unreadChats: [],
+            cloudFirestoreReference: db.doc('users/user_c'),
           },
 
           user_d: {
-            accessToken: {},
-            notificationTokens: [],
-            unreadChats: [],
+            cloudFirestoreReference: db.doc('users/user_d'),
           },
 
           user_e: {
-            accessToken: {},
-            notificationTokens: [],
-            unreadChats: [],
+            cloudFirestoreReference: db.doc('users/user_e'),
           },
 
           user_f: {
-            accessToken: {},
-            notificationTokens: [],
-            unreadChats: [],
+            cloudFirestoreReference: db.doc('users/user_f'),
           },
         },
       },
@@ -343,13 +269,10 @@ module.exports = function fixtureData(db) {
       users: {
         __doc__: {
           user_a: {
-            displayName: 'User A',
-            displayUsername: null,
-            metaInfo: db.doc('userMetaInfos/user_a'),
-            name: 'user a',
+            displayUsername: 'user_a',
             photoUrl: null,
-            provider: {},
-            username: null,
+            shortBio: null,
+            username: 'user_a',
 
             __collection__: {
               sitesAsAdmin: {
@@ -363,53 +286,38 @@ module.exports = function fixtureData(db) {
           },
 
           user_b: {
-            displayName: 'User B',
-            displayUsername: null,
-            metaInfo: db.doc('userMetaInfos/user_b'),
-            name: 'user b',
+            displayUsername: 'user_b',
             photoUrl: null,
-            provider: {},
-            username: null,
+            shortBio: null,
+            username: 'user_b',
           },
 
           user_c: {
-            displayName: 'User C',
-            displayUsername: null,
-            metaInfo: db.doc('userMetaInfos/user_c'),
-            name: 'user c',
+            displayUsername: 'user_b',
             photoUrl: null,
-            provider: {},
-            username: null,
+            shortBio: null,
+            username: 'user_b',
           },
 
           user_d: {
-            displayName: 'User D',
-            displayUsername: null,
-            metaInfo: db.doc('userMetaInfos/user_d'),
-            name: 'user d',
+            displayUsername: 'user_d',
             photoUrl: null,
-            provider: {},
-            username: null,
+            shortBio: null,
+            username: 'user_d',
           },
 
           user_e: {
-            displayName: 'User E',
-            displayUsername: null,
-            metaInfo: db.doc('userMetaInfos/user_e'),
-            name: 'user e',
+            displayUsername: 'user_e',
             photoUrl: null,
-            provider: {},
-            username: null,
+            shortBio: null,
+            username: 'user_e',
           },
 
           user_f: {
-            displayName: 'User F',
-            displayUsername: null,
-            metaInfo: db.doc('userMetaInfos/user_f'),
-            name: 'user f',
+            displayUsername: 'user_f',
             photoUrl: null,
-            provider: {},
-            username: null,
+            shortBio: null,
+            username: 'user_f',
           },
         },
       },

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "cenchat-app-staging"
+    "sandbox": "cenchat-app-sandbox",
+    "staging": "cenchat-app-staging"
   }
 }

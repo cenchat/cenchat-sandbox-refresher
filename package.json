@@ -7,7 +7,8 @@
   "repository": "https://github.com/cenchat/cenchat-web-test-data-refresher",
   "scripts": {
     "start": "firebase serve",
-    "deploy": "firebase deploy",
+    "deploy": "firebase deploy --project staging",
+    "deploy-sandbox": "firebase deploy --project sandbox",
     "test": "eslint ./**/*.js"
   },
   "author": "Cenchat",

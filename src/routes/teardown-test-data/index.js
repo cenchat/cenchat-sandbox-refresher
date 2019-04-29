@@ -56,18 +56,15 @@ function teardownTestData(admin) {
   const batch = db.batch();
   const data = {
     chats: {},
-    defaultStickerPacks: {},
     notifications: {},
     messages: {},
     pages: {},
     sites: { admins: {}, slugs: {} },
-    stickerPacks: {},
-    stickers: {},
-    userMetaInfos: {},
+    username: {},
     users: {
       chats: {},
+      notificationTokens: {},
       sitesAsAdmin: {},
-      stickerPacks: {},
     },
   };
 
