@@ -60,7 +60,7 @@ function teardownTestData(admin) {
     messages: {},
     pages: {},
     sites: { admins: {}, slugs: {} },
-    username: {},
+    usernames: {},
     users: {
       chats: {},
       notificationTokens: {},
